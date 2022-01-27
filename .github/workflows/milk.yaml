@@ -1,0 +1,15 @@
+name: 'GitHub Actions Milk Bot'
+ 
+on:
+  push:
+  schedule:
+    - cron: '0 22 3,6,9,12,15,18,21,24,27,30 * *'
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout codes'
+        uses: actions/checkout@v1
+      - name: 'Send Message'
+        run: curl https://sctapi.ftqq.com/${{secrets.SENDKEY}}.send\?title\=%E6%8B%BF%E7%89%9B%E5%A5%B6
