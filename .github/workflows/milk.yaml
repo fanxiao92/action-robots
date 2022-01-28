@@ -3,7 +3,7 @@ name: 'GitHub Actions Milk Bot'
 on:
   push:
   schedule:
-    - cron: '0 22 3,6,9,12,15,18,21,24,27,30 * *'
+    - cron: '0 22 2,5,8,11,14,17,20,23,26,29 * *'
 
 jobs:
   bot:
